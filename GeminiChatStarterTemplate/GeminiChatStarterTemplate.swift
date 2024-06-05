@@ -19,10 +19,11 @@ import GoogleGenerativeAI
             responseMIMEType: "text/plain"
         )
     )
+    
+    
 
     func prompt() -> () {
         Task {
-            print(#function)
             do {
                 let chat = model.startChat(history: [
                     
