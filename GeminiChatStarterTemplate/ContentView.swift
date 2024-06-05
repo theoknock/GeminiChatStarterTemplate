@@ -1,24 +1,34 @@
-//
-//  ContentView.swift
-//  GeminiChatStarterTemplate
-//
-//  Created by Xcode Developer on 6/4/24.
-//
-
 import SwiftUI
+import Foundation
+import Combine
+import Observation
+import GoogleGenerativeAI
 
 struct ContentView: View {
+    @State private var gemini: GeminiChatStarterTemplate = GeminiChatStarterTemplate()
+    
     var body: some View {
+        Spacer()
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+            Text("♊︎")
+                .font(.largeTitle)
+            Spacer()
+            Text($gemini.responseText.wrappedValue)
+            TextField("Send a message to Gemini...", text: $gemini.promptText)
+                .padding()
+                .border(.blue, width: 1.0)
+                .safeAreaPadding()
+                .onSubmit {
+                    gemini.prompt(prompt: gemini.promptText)
+                }
+            Spacer()
         }
-        .padding()
+        Spacer()
     }
 }
 
 #Preview {
     ContentView()
+        .preferredColorScheme(.dark)
 }

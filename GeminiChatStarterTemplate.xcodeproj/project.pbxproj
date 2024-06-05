@@ -11,6 +11,8 @@
 		B936A6B52C101A18009C9FAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936A6B42C101A18009C9FAC /* ContentView.swift */; };
 		B936A6B72C101A19009C9FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B936A6B62C101A19009C9FAC /* Assets.xcassets */; };
 		B936A6BA2C101A19009C9FAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B936A6B92C101A19009C9FAC /* Preview Assets.xcassets */; };
+		B936A6C12C101A31009C9FAC /* GeminiChatStarterTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936A6C02C101A31009C9FAC /* GeminiChatStarterTemplate.swift */; };
+		B936A6C42C101B60009C9FAC /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = B936A6C32C101B60009C9FAC /* GoogleGenerativeAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		B936A6B42C101A18009C9FAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B936A6B62C101A19009C9FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B936A6B92C101A19009C9FAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B936A6C02C101A31009C9FAC /* GeminiChatStarterTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiChatStarterTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B936A6C42C101B60009C9FAC /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				B936A6B22C101A18009C9FAC /* GeminiChatStarterTemplateApp.swift */,
 				B936A6B42C101A18009C9FAC /* ContentView.swift */,
+				B936A6C02C101A31009C9FAC /* GeminiChatStarterTemplate.swift */,
 				B936A6B62C101A19009C9FAC /* Assets.xcassets */,
 				B936A6B82C101A19009C9FAC /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = GeminiChatStarterTemplate;
+			packageProductDependencies = (
+				B936A6C32C101B60009C9FAC /* GoogleGenerativeAI */,
+			);
 			productName = GeminiChatStarterTemplate;
 			productReference = B936A6AF2C101A18009C9FAC /* GeminiChatStarterTemplate.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = B936A6A62C101A18009C9FAC;
+			packageReferences = (
+				B936A6C22C101B60009C9FAC /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = B936A6B02C101A18009C9FAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B936A6B52C101A18009C9FAC /* ContentView.swift in Sources */,
+				B936A6C12C101A31009C9FAC /* GeminiChatStarterTemplate.swift in Sources */,
 				B936A6B32C101A18009C9FAC /* GeminiChatStarterTemplateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B936A6C22C101B60009C9FAC /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B936A6C32C101B60009C9FAC /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B936A6C22C101B60009C9FAC /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B936A6A72C101A18009C9FAC /* Project object */;
 }
