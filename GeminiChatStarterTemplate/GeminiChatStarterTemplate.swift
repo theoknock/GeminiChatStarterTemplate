@@ -9,8 +9,8 @@ import GoogleGenerativeAI
     var promptText: String = String()
     
     let model = GenerativeModel(
-        name: "gemini-1.5-flash",
-        apiKey: "AIzaSyBUDbB1hrpty5uSVKdlzKS2wwbShRNZNAE",
+        name: "gemini-1.5-pro",
+        apiKey: "",
         generationConfig: GenerationConfig(
             temperature: 1,
             topP: 0.95,
@@ -20,7 +20,7 @@ import GoogleGenerativeAI
         )
     )
 
-    func prompt(prompt: String) -> () {
+    func prompt() -> () {
         Task {
             print(#function)
             do {

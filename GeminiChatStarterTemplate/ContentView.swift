@@ -24,13 +24,18 @@ struct ContentView: View {
                     .foregroundStyle(toneBarrierSapphire.opacity(0.15))
                 Spacer()
                 Text($gemini.responseText.wrappedValue)
+                    .padding()
+                    .safeAreaPadding()
+                    .foregroundStyle(.primary)
+//                    .scaledToFit()
+//                    .background(.regularMaterial)
             }
             TextField("Send a message to Gemini...", text: $gemini.promptText)
-                .padding()
-                .border(.blue, width: 1.0)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: UIScreen.main.bounds.size.width)
                 .safeAreaPadding()
                 .onSubmit {
-                    gemini.prompt(prompt: gemini.promptText)
+                    gemini.prompt()
                 }
             Spacer()
         }
